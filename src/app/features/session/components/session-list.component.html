@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <h2 class="mt-2">📚 Liste des séances programmeés</h2>
+
+  <ul class="session-list">
+    <li *ngFor="let s of sessions">
+      <div class="session-item">
+        <div class="info">
+          <strong>{{ s.sujet }}</strong> — {{ s.date }} — {{ s.mode }}
+        </div>
+        <button class="delete-btn" (click)="supprimer(s.id)">❌</button>
+      </div>
+    </li>
+  </ul>
+
+  <button class="create-btn" routerLink="/sessions/create">➕ Créer une séance</button>
+</div>

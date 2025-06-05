@@ -1,0 +1,24 @@
+<div class="form-container">
+
+<mat-card>
+  <mat-card-title>Réponses</mat-card-title>
+  <mat-card-content>
+    <div *ngFor="let response of responses">
+      <p><strong>{{ response.author }} :</strong> {{ response.content }}</p>
+      <button mat-icon-button color="primary" (click)="voteUp(response.id)">
+        <mat-icon>thumb_up</mat-icon> {{ response.votes }}
+      </button>
+      <hr>
+    </div>
+
+    <mat-form-field class="full-width">
+      <mat-label>Ajouter une réponse</mat-label>
+      <textarea matInput [(ngModel)]="newResponse" rows="3"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="submitResponse()">
+      Publier
+    </button>
+  </mat-card-content>
+</mat-card>
+</div>

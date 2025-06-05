@@ -1,0 +1,81 @@
+mat-card {
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+mat-card-title {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: #1565c0; /* bleu Material */
+  margin-bottom: 16px;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+mat-card-content > div {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+mat-card-content > div p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  flex: 1;
+}
+
+button[mat-icon-button] {
+  color: #1976d2;
+  margin-left: 12px;
+  transition: color 0.3s ease;
+}
+
+button[mat-icon-button]:hover {
+  color: #0d47a1;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  margin: 8px 0 0 0;
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-form-field.full-width {
+  margin-top: 8px;
+}
+.form-container {
+  width: 40%;
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fffdf7; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+}
+button[mat-raised-button] {
+  align-self: flex-end;
+  padding: 0 24px;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #0d47a1;
+}

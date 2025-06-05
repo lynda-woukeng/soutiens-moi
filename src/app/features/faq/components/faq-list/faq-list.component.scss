@@ -1,0 +1,49 @@
+mat-card {
+  margin-bottom: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.form-container {
+  width: 40%;
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fffdf7; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+}
+mat-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+mat-card-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #1976d2; 
+  margin-bottom: 8px;
+}
+
+mat-card-content {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+}
+
+button[mat-icon-button] {
+  color: #1976d2;
+  transition: color 0.3s ease;
+}
+
+button[mat-icon-button]:hover {
+  color: #004ba0;
+}

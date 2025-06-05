@@ -1,0 +1,7 @@
+<div class="form-container">
+
+<div *ngIf="visible" class="notification">
+  <strong>Notification :</strong> {{ message }}
+  <button (click)="close()" class="close-btn">×</button>
+</div>
+</div>

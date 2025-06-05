@@ -1,0 +1,21 @@
+<div class="container mt-5">
+  <form #form="ngForm" (ngSubmit)="creer()" class="form">
+    <label>Sujet :
+      <input [(ngModel)]="session.sujet" name="sujet" required />
+    </label><br>
+
+    <label>Date :
+      <input type="datetime-local" [(ngModel)]="session.date" name="date" required />
+    </label><br>
+
+    <label>Mode :
+      <select [(ngModel)]="session.mode" name="mode" required>
+        <option value="">-- Choisir un mode --</option>
+        <option value="visio">Visio</option>
+        <option value="présentiel">Présentiel</option>
+      </select>
+    </label><br>
+
+    <button type="submit" [disabled]="!form.valid">Créer</button>
+  </form>
+</div>

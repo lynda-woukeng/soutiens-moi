@@ -1,0 +1,22 @@
+
+
+<div class="form-container bg-white bg-opacity-50">
+
+    <h2 class="text-center mt-2">Connexion</h2>
+  <form  [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">Email :</label>
+      <input type="email" id="email" formControlName="email" class="form-control" placeholder="Entrez Votre email" />
+    </div>
+    <div class="form-group">
+      <label for="mot-de-passe">mot de passe :</label>
+      <input type="password" id="password" formControlName="password" class="form-control" placeholder=" Entrez Votre mot de passe" />
+    </div>
+
+    <div class="text-center mt-3">
+          <button class="  btn-primary" (click)="goTo('/welcome')">se connecter</button>
+    </div>
+  
+
+  </form>
+</div>

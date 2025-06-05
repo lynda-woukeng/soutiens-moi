@@ -1,0 +1,20 @@
+<div class="form-container">
+  <mat-card>
+  <mat-card-title>Nouvelle Question</mat-card-title>
+  <mat-card-content>
+    <mat-form-field class="full-width">
+      <mat-label>Titre</mat-label>
+      <input matInput [(ngModel)]="title">
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <mat-label>Contenu</mat-label>
+      <textarea matInput [(ngModel)]="content" rows="4"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="submit()">
+      Publier
+    </button>
+  </mat-card-content>
+</mat-card>
+</div>

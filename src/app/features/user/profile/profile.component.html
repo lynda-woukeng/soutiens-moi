@@ -1,0 +1,43 @@
+
+<div class="form-container bg-white bg-opacity-50 p-4 rounded shadow-sm mx-auto" style="max-width: 600px;">
+    <h2 class="text-center mt-2">Choisissez votre photo de profil</h2>
+
+  <form #form="ngForm" (ngSubmit)="submitForm(form)">
+
+    
+    <div class="text-center mb-3" (click)="triggerFileInput()" style="cursor: pointer;">
+      <img
+        [src]="profileImage || 'https://www.w3schools.com/howto/img_avatar.png'"
+        alt="https://www.w3schools.com/howto/img_avatar.png"
+        class="rounded-circle"
+        style="width: 120px; height: 120px; object-fit: cover;"
+      />
+      <input
+        type="file"
+        (change)="onImageSelected($event)"
+        accept="image/*"
+        hidden
+      />
+    </div>
+
+
+    <div class="form-group mb-3">
+      <label for="roleDescription">Décrivez votre rôle :</label>
+      <textarea
+        id="roleDescription"
+        name="roleDescription"
+        [(ngModel)]="roleDescription"
+        required
+        class="form-control"
+        rows="4"
+        placeholder="Entrez votre rôle ici"
+      ></textarea>
+    </div>
+
+    
+    <div class="text-center">
+     
+      <button type="button" class="btn btn-secondary" (click)="goTo('/welcome')">Terminer</button>
+    </div>
+  </form>
+</div>
