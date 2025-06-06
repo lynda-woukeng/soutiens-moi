@@ -1,20 +1,27 @@
-<div class="form-container">
-  <mat-card>
-  <mat-card-title>Nouvelle Question</mat-card-title>
-  <mat-card-content>
-    <mat-form-field class="full-width">
-      <mat-label>Titre</mat-label>
-      <input matInput [(ngModel)]="title">
-    </mat-form-field>
+<ion-content class="ion-padding">
+  <div class="form-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Nouvelle Question</ion-card-title>
+      </ion-card-header>
 
-    <mat-form-field class="full-width">
-      <mat-label>Contenu</mat-label>
-      <textarea matInput [(ngModel)]="content" rows="4"></textarea>
-    </mat-form-field>
+      <ion-card-content>
+        <ion-item class="full-width">
+          <ion-label position="floating">Titre</ion-label>
+          <ion-input [(ngModel)]="title" type="text"></ion-input>
+        </ion-item>
 
-    <button mat-raised-button color="primary" (click)="submit()">
-      Publier
-    </button>
-  </mat-card-content>
-</mat-card>
-</div>
+        <ion-item class="full-width">
+          <ion-label position="floating">Contenu</ion-label>
+          <ion-textarea [(ngModel)]="content" rows="4"></ion-textarea>
+        </ion-item>
+
+        <div class="ion-text-end ion-margin-top">
+          <ion-button color="primary" (click)="submit()">
+            Publier
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

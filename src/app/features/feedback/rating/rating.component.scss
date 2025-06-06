@@ -1,27 +1,42 @@
 .form-container {
-  width: 40%;
+  width: 90%;
   max-width: 500px;
   margin: 60px auto;
   padding: 40px;
-  background: #fffdf7; 
+  background: #fffdf7;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  
 }
+
 .stars {
-      font-size: 2rem;
-      color: gray;
-      cursor: pointer;
-    }
-    .stars .filled {
-      color: gold;
-    }
-    button {
+  display: flex;
+  font-size: 2rem;
+  color: gray;
+  cursor: pointer;
+  gap: 8px;
+  user-select: none;
+ 
+}
+
+.stars .filled {
+  color: gold;
+}
+
+
+ion-button,
+button {
   background-color: #007bff;
   color: white;
   font-weight: bold;
   cursor: pointer;
   margin-top: 1.5rem;
   transition: background-color 0.3s ease;
+  width: 100%;
+  border-radius: 6px;
+}
+
+ion-button:hover,
+button:hover {
+  background-color: #0056b3;
 }

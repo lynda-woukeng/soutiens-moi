@@ -1,7 +1,12 @@
-<div class="form-container">
-
-<div *ngIf="visible" class="notification">
-  <strong>Notification :</strong> {{ message }}
-  <button (click)="close()" class="close-btn">×</button>
-</div>
-</div>
+<ion-content class="ion-padding">
+  <div class="center-wrapper">
+    <div class="form-container">
+      <ion-card *ngIf="visible" class="notification">
+        <ion-card-content>
+          <strong>Notification :</strong> {{ message }}
+          <button (click)="close()" class="close-btn">×</button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

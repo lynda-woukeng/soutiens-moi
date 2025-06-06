@@ -1,13 +1,20 @@
+<ion-content class="ion-padding">
+  <div class="form-container">
+    <ion-card *ngFor="let q of questions">
+      <ion-card-header>
+        <ion-card-title>{{ q.title }}</ion-card-title>
+      </ion-card-header>
 
-<div class="form-container">
+      <ion-card-content>
+        {{ q.content }}
+      </ion-card-content>
 
-<mat-card *ngFor="let q of questions">
-  <mat-card-title>{{ q.title }}</mat-card-title>
-  <mat-card-content>{{ q.content }}</mat-card-content>
-  <mat-card-actions>
-    <button mat-icon-button (click)="vote(q.id)">
-      <mat-icon>thumb_up</mat-icon> {{ q.votes }}
-    </button>
-  </mat-card-actions>
-</mat-card>
-</div>
+      <ion-card-content>
+        <ion-button fill="clear" size="small" (click)="vote(q.id)">
+          <ion-icon name="thumbs-up-outline" slot="start"></ion-icon>
+          {{ q.votes }}
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

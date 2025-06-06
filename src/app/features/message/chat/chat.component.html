@@ -1,13 +1,16 @@
-<div class="form-container">
+<ion-content class="ion-padding">
+  <div class="center-wrapper">
+    <div class="form-container">
+      <h2>💬 Chat simple</h2>
 
-<h2>💬 Chat simple</h2>
+      <div *ngFor="let msg of messages">
+        👉 {{ msg }}
+      </div>
 
-<div *ngFor="let msg of messages">
-  👉 {{ msg }}
-</div>
+      <br />
 
-<br />
-
-<input [(ngModel)]="newMessage" placeholder="Écris un message..." />
-<button (click)="envoyer()" class="mt-3">Envoyer</button>
-</div>
+      <input [(ngModel)]="newMessage" placeholder="Écris un message..." />
+      <button (click)="envoyer()" class="mt-3">Envoyer</button>
+    </div>
+  </div>
+</ion-content>

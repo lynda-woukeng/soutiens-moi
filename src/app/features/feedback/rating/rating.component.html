@@ -1,16 +1,27 @@
-<div class="form-container">
-<h2>📝 Donner un avis</h2>
+<ion-content class="ion-padding">
+  <div class="form-container">
+    <h2>Donner un avis</h2>
 
-<label>Note :</label>
-<div class="stars">
-  <span *ngFor="let star of stars; let i = index" 
-        (click)="setNote(i + 1)" 
-        [class.filled]="i < note"
-        >&#9733;</span>
+    <ion-label>Note :</ion-label>
+ <div class="stars">
+  <span *ngFor="let star of stars; let i = index"
+        (click)="setNote(i + 1)"
+        [class.filled]="i < note">&#9733;</span>
 </div>
 
-<label>Commentaire:</label><br>
-<textarea [(ngModel)]="commentaire" rows="4" cols="40"></textarea><br><br>
 
-<button (click)="envoyerFeedback() " class="text-center">Envoyer</button>
-</div>
+
+    <ion-label>Commentaire :</ion-label>
+    <ion-textarea
+      [(ngModel)]="commentaire"
+      rows="4"
+      placeholder="Votre commentaire ici...">
+    </ion-textarea>
+
+    <div class="ion-text-center ion-margin-top">
+      <ion-button (click)="envoyerFeedback()" color="primary">
+        Envoyer
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,18 +1,29 @@
-mat-card {
+.form-container {
+  width: 40%;
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #fffdf7;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+ion-card {
   max-width: 500px;
   margin: 20px auto;
   border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-mat-card-title {
+ion-card-title {
   font-weight: 700;
   font-size: 1.6rem;
-  color: #1565c0; /* bleu Material */
+  color: #1565c0;
   margin-bottom: 16px;
 }
 
-mat-card-content {
+ion-card-content {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -21,26 +32,27 @@ mat-card-content {
 .full-width {
   width: 100%;
 }
-.form-container {
-  width: 40%;
-  max-width: 500px;
-  margin: 60px auto;
-  padding: 40px;
-  background: #fffdf7; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  
+
+ion-input,
+ion-textarea {
+  --padding-start: 0;
+  font-size: 1rem;
+  background: transparent;
 }
-button[mat-raised-button] {
+
+ion-item {
+  --background: transparent;
+}
+
+ion-button {
   align-self: flex-end;
-  padding: 0 24px;
   font-weight: 600;
   font-size: 1rem;
   border-radius: 6px;
+  padding: 0 24px;
   transition: background-color 0.3s ease;
 }
 
-button[mat-raised-button]:hover {
-  background-color: #0d47a1; 
+ion-button:hover {
+  --background: #0d47a1;
 }

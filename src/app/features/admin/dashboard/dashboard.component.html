@@ -1,8 +1,20 @@
-<h2>📊 Tableau de bord</h2>
+<ion-content class="ion-padding">
+  <ion-card class="form-container">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">📊 Tableau de bord</ion-card-title>
+    </ion-card-header>
 
-<div class="form-container">
-  <ul>
-  <li>Utilisateurs : {{ stats.utilisateurs }}</li>
-  <li>Commentaires : {{ stats.commentaires }}</li>
-  </ul>
-</div>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label>Utilisateurs :</ion-label>
+          <ion-note slot="end">{{ stats.utilisateurs }}</ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Commentaires :</ion-label>
+          <ion-note slot="end">{{ stats.commentaires }}</ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

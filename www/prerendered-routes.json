@@ -1,0 +1,21 @@
+{
+  "routes": {
+    "/": {},
+    "/auth": {},
+    "/auth/login": {},
+    "/auth/register": {},
+    "/dashboard": {},
+    "/faq": {},
+    "/faq/post": {},
+    "/feedback": {},
+    "/home": {},
+    "/messages": {},
+    "/notification": {},
+    "/payments": {},
+    "/sessions": {},
+    "/sessions/create": {},
+    "/user": {},
+    "/user/profile": {},
+    "/user/skill-list": {}
+  }
+}

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "www/browser"
+		},
+		{
+			"path": "www/dist"
+		},
+		{
+			"path": "www/server"
+		}
+	],
+	"settings": {}
+}

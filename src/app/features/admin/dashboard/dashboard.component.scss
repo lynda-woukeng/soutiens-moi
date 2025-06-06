@@ -7,42 +7,40 @@ h2 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  justify-content: center;
 }
+
 .form-container {
   width: 40%;
   max-width: 500px;
-  margin: 60px auto;
+  margin: 0 auto 40px;
   padding: 40px;
-  background: #fffdf7; 
+  background: #fffdf7;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  
-}
-ul {
-  width: 40%;
-  list-style: none;
-  padding: 0;
-  max-width: 300px;
-  background: #f8f9fa;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-ul li {
-  padding: 15px 20px;
-  border-bottom: 1px solid #e1e4e8;
+.stats-list {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+ion-item {
+  --padding-start: 20px;
+  --inner-padding-end: 20px;
   font-weight: 600;
   color: #34495e;
   font-size: 1.1rem;
   transition: background-color 0.3s ease;
 }
 
-ul li:last-child {
-  border-bottom: none;
-}
-
-ul li:hover {
+ion-item:hover {
   background-color: #e3f2fd;
   cursor: default;
 }

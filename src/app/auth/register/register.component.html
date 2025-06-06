@@ -1,28 +1,39 @@
-<div class=" p-3 form-container bg-white bg-opacity-50">
-<h2 class="text-center mt-2">Inscription</h2>
+<ion-content class="ion-padding">
+  <ion-card class="form-container">
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Inscription</ion-card-title>
+    </ion-card-header>
 
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-  <div class="form-group">
-    <label>Nom d'utilisateur :</label>
-    <input type="text" formControlName="username" class="form-control" placeholder=" Entrez Votre nom" />
-  </div>
+    <ion-card-content>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        
+        <ion-item class="ion-margin-top ">
+          <ion-label position="stacked">Nom d'utilisateur</ion-label>
+          <ion-input type="text" formControlName="username" placeholder="Entrez votre nom"></ion-input>
+        </ion-item>
 
-  <div class="form-group mt-3">
-    <label>Email :</label>
-    <input type="email" formControlName="email" class="form-control" placeholder="Entrez Votre email" />
-  </div>
+        <ion-item class="ion-margin-top ">
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input type="email" formControlName="email" placeholder="Entrez votre email"></ion-input>
+        </ion-item>
 
-  <div class="form-group mt-3">
-    <label>Mot de passe :</label>
-    <input type="password" formControlName="password" class="form-control" placeholder="Entrez Votre mot de passe" />
-  </div>
-  <div class="form-group mt-3">
-    <label> Confirmez le mot de passe :</label>
-    <input type="password" formControlName="password" class="form-control" placeholder="veuillez confirmer le mot de passe" />
-  </div>
-  
- <div class="text-center mt-2">
-  <button type="button" class="btn btn-primary " (click)="goTo('/profile-setup')">S'INSCRIRE</button>
-</div>
-</form>
-</div>
+        <ion-item class="ion-margin-top ">
+          <ion-label position="stacked">Mot de passe</ion-label>
+          <ion-input type="password" formControlName="password" placeholder="Entrez votre mot de passe"></ion-input>
+        </ion-item>
+
+        <ion-item class="ion-margin-top ">
+          <ion-label position="stacked">Confirmez le mot de passe</ion-label>
+          <ion-input type="password" formControlName="confirmPassword" placeholder="Confirmez le mot de passe"></ion-input>
+        </ion-item>
+
+        <div class="ion-text-center ion-margin-top">
+          <ion-button expand="block" type="submit" (click)="goTo('/profile-setup')">
+            S'inscrire
+          </ion-button>
+        </div>
+
+      </form>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

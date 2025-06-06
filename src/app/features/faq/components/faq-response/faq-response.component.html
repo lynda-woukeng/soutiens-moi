@@ -1,24 +1,26 @@
 <div class="form-container">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Réponses</ion-card-title>
+    </ion-card-header>
 
-<mat-card>
-  <mat-card-title>Réponses</mat-card-title>
-  <mat-card-content>
-    <div *ngFor="let response of responses">
-      <p><strong>{{ response.author }} :</strong> {{ response.content }}</p>
-      <button mat-icon-button color="primary" (click)="voteUp(response.id)">
-        <mat-icon>thumb_up</mat-icon> {{ response.votes }}
-      </button>
-      <hr>
-    </div>
+    <ion-card-content>
+      <div *ngFor="let response of responses">
+        <p><strong>{{ response.author }} :</strong> {{ response.content }}</p>
+        <ion-button fill="clear" color="primary" (click)="voteUp(response.id)">
+          <ion-icon slot="start" name="thumbs-up"></ion-icon> {{ response.votes }}
+        </ion-button>
+        <ion-item lines="full"></ion-item>
+      </div>
 
-    <mat-form-field class="full-width">
-      <mat-label>Ajouter une réponse</mat-label>
-      <textarea matInput [(ngModel)]="newResponse" rows="3"></textarea>
-    </mat-form-field>
+      <ion-item>
+        <ion-label position="floating">Ajouter une réponse</ion-label>
+        <ion-textarea [(ngModel)]="newResponse" rows="3"></ion-textarea>
+      </ion-item>
 
-    <button mat-raised-button color="primary" (click)="submitResponse()">
-      Publier
-    </button>
-  </mat-card-content>
-</mat-card>
+      <ion-button expand="block" color="primary" (click)="submitResponse()">
+        Publier
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
 </div>

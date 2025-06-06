@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor} from '@angular/common';
 
+
 interface Question {
   id: number;
   title: string;
@@ -16,7 +17,7 @@ interface Question {
     <div *ngFor="let question of questions" style="margin-bottom: 16px; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
       <h3>{{ question.title }}</h3>
       <p>{{ question.content }}</p>
-      <button (click)="vote(question.id)">👍 {{ question.votes }}</button>
+      <button (click)="vote(question.id)">👍{{ question.votes }}</button>
     </div>
   `
 })

@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { IonicModule } from '@ionic/angular';
 
 interface Response {
   id: number;
@@ -16,7 +17,7 @@ interface Response {
 @Component({
   selector: 'app-faq-response',
   standalone: true,
-  imports: [FormsModule, MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule],
+  imports: [FormsModule, MatCardModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule,IonicModule],
   templateUrl: './faq-response.component.html',
     styleUrl: './faq-response.component.scss'
 

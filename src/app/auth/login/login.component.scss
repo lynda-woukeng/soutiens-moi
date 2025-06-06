@@ -1,69 +1,103 @@
-body {
-  background-color: #f2f4f8;
-  margin: 0;
-  padding: 0;
+ion-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  
 }
+html, body, ion-app, ion-router-outlet {
+  height: 100%;
+}
+
 
 .form-container {
   width: 40%;
-  max-width: 500px;
+  max-width: 600px;
   margin: 60px auto;
   padding: 40px;
-  background: #fffdf7; 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fffdf7; 
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  
 }
 
-h2 {
+ion-card-header {
+  margin-bottom: 32px;
+}
+
+ion-card-title {
+  color: #24029f;
+  font-weight: 700;
+  font-size: 28px;
   text-align: center;
+}
+
+ion-item {
+  --border-width: 2px;
+  --border-style: solid;
+  --border-color: #ccc;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  padding-left: 12px;
+  padding-right: 12px;
+  transition: border-color 0.3s ease;
+}
+
+ion-item:focus-within {
+  --border-color: #24029f;
+}
+
+ion-label {
   color: #444;
   font-weight: 600;
-  
+  font-size: 16px;
 }
 
-.form-group {
-  margin-bottom: 25px;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  color: #333;
-  font-weight: 500;
-}
-
-input[type="email"],
-input[type="password"] {
+ion-input {
+  font-size: 16px;
+  color: #222;
   width: 100%;
-  padding: 12px;
-  font-size: 15px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  background-color: #f7f9fc;
+  height: 50px;
 }
 
-input[type="email"]:focus,
-input[type="password"]:focus {
-  border-color: #9cb6ff;
-  outline: none;
-  background-color: #ffffff;
+ion-input input {
+  background: transparent;
+  border: none;
+  color: #222;
+  font-size: 16px;
+  height: 100%;
+  padding: 0 8px;
 }
 
-
-.btn-primary {
-  background-color: #24029f;
-  color: white;
-  padding: 12px 20px;
-  font-size: 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: all 0.3s ease;
+ion-text {
+  font-size: 14px;
+  color: #d93025;
+  padding-left: 10px;
+  margin-top: -16px;
+  margin-bottom: 12px;
+  display: block;
 }
 
-.btn-primary:hover {
-  background-color: #6a4de0;
+ion-button {
+  --background: linear-gradient(90deg, #24029f 0%, #6a4de0 100%);
+  --border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 16px 0;
+  box-shadow: 0 6px 12px rgba(36, 2, 159, 0.4);
+  width: 100%;
 }
 
+ion-button:hover,
+ion-button:focus {
+  --background: linear-gradient(90deg, #6a4de0 0%, #24029f 100%);
+  box-shadow: 0 8px 18px rgba(36, 2, 159, 0.6);
+}
+
+/* Si tu veux styliser un bouton désactivé : */
+/*
+ion-button[disabled] {
+  --background: #bbb;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+*/
